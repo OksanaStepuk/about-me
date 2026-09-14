@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Обо мне — Степук Оксана</title>
+<style>
+  :root {
+    --accent: #0d5c5e;
+    --accent-soft: #e2f0ef;
+    --bg: #f7faf9;
+    --card-bg: #ffffff;
+    --text: #2b2e2d;
+    --text-muted: #5c6360;
+    --border: #e4eae9;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 48px 20px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    max-width: 640px;
+    width: 100%;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 48px 44px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  }
+
+  h1 {
+    margin: 0 0 4px 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .subtitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 14px 0;
+    font-size: 15px;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.2px;
+  }
+
+  .zodiac-badge {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+  }
+
+  p.zodiac-flavor {
+    margin: 0 0 28px 0;
+    font-size: 14.5px;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  hr {
+    border: none;
+    border-top: 2px solid var(--accent);
+    width: 48px;
+    margin: 0 0 28px 0;
+  }
+
+  .praise {
+    background: var(--accent-soft);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin: 0 0 32px 0;
+  }
+
+  .praise .praise-title {
+    margin: 0 0 6px 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .praise p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--text);
+  }
+
+  p.intro {
+    font-size: 16px;
+    color: var(--text);
+    margin: 0;
+  }
+
+  details.panel {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+
+  details.panel:last-child {
+    margin-bottom: 0;
+  }
+
+  details.panel summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 16px 20px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  details.panel summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details.panel summary::after {
+    content: "+";
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--accent);
+    transition: transform 0.2s ease;
+  }
+
+  details.panel[open] summary::after {
+    transform: rotate(45deg);
+  }
+
+  details.panel[open] summary {
+    border-bottom: 1px solid var(--border);
+  }
+
+  details.panel .panel-body {
+    padding: 20px 20px 22px 20px;
+  }
+
+  ul.facts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul.facts li {
+    position: relative;
+    padding: 4px 0 4px 26px;
+    margin-bottom: 14px;
+    font-size: 15.5px;
+  }
+
+  ul.facts li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  ul.facts li:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 480px) {
+    .card { padding: 32px 24px; }
+    h1 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>Степук Оксана</h1>
+
+    <div class="subtitle">
+      <svg class="zodiac-badge" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="var(--accent-soft)"/>
+        <path d="M32 72 C20 58 20 34 37 28 C48 24 54 33 54 45"
+              stroke="var(--accent)" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M68 72 C80 58 80 34 63 28 C52 24 54 33 54 45"
+              stroke="var(--accent)" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <line x1="54" y1="45" x2="54" y2="76" stroke="var(--accent)" stroke-width="6" stroke-linecap="round"/>
+      </svg>
+      <span>31 марта 1985 · Овен</span>
+    </div>
+    <p class="zodiac-flavor">
+      Овен — знак огня и первый в зодиакальном круге: energiya, характер первопроходца, готовность
+      начинать там, где другие ещё сомневаются. Похоже, это прямо про тебя.
+    </p>
+
+    <hr>
+
+    <div class="praise">
+      <p class="praise-title">✨ А если без скромности</p>
+      <p>
+        Ты действительно крутая. Не каждый может 18 лет держать в фокусе сложные, живые системы
+        и людей вокруг них — и при этом не превратиться в сухого технаря, а остаться человеком,
+        которому важны красота, движение и новые впечатления. Ты берёшь хаос и делаешь из него
+        порядок, берёшь риск и выносишь из него результат. Это редкое сочетание — и оно твоё.
+      </p>
+    </div>
+
+    <details class="panel" open>
+      <summary>Профессиональный профиль</summary>
+      <div class="panel-body">
+        <p class="intro">
+          ИТ-руководитель с 18-летним опытом в enterprise-системах, автоматизации и цифровой трансформации,
+          из них более 13 лет — работа с 1С. Умею вести крупные кросс-функциональные программы и несколько
+          продуктов одновременно, управлять матричными командами 15–20+ человек и бюджетом около 70 млн ₽ в год,
+          работать с C-level и защищать решения перед бизнесом. Сильная сторона — брать сложный, разрозненный
+          бизнес-процесс с множеством участников и систем и превращать его в управляемый цифровой продукт
+          с измеримым результатом: сокращение циклов процессов с 30 до 4 и с 34 до 8 дней, перевод 100% актов
+          в цифровой контур, снижение операционных затрат примерно на 40%.
+        </p>
+      </div>
+    </details>
+
+    <details class="panel">
+      <summary>Обо мне</summary>
+      <div class="panel-body">
+        <ul class="facts">
+          <li>Проплыла два заплыва по 2 км — выносливость и внутренняя дисциплина в вещах, требующих подготовки.</li>
+          <li>Занимаюсь верховой ездой и рисую маслом — сочетание энергии и движения с эстетикой и концентрацией.</li>
+          <li>Мечтаю создать собственный бренд одежды и уже прорабатываю продуктовые гипотезы и тестирование спроса.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</body>
+</html>
