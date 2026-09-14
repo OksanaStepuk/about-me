@@ -184,6 +184,25 @@
     .card { padding: 32px 24px; }
     h1 { font-size: 26px; }
   }
+
+  .toggle-btn {
+    display: block;
+    margin: 28px auto 0 auto;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    color: #ffffff;
+    background: var(--accent);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .toggle-btn.is-clicked {
+    background: #c15b3a;
+  }
 </style>
 </head>
 <body>
@@ -243,6 +262,35 @@
         </ul>
       </div>
     </details>
+
+    <button id="toggleBtn" class="toggle-btn">Нажми меня</button>
   </div>
+
+  <script>
+    // Находим кнопку на странице по её id и сохраняем ссылку на неё в переменную
+    const button = document.getElementById('toggleBtn');
+
+    // Флаг состояния: false — кнопку ещё не нажимали (или нажали чётное число раз)
+    let isClicked = false;
+
+    // Подписываемся на событие клика по кнопке
+    button.addEventListener('click', () => {
+      // При каждом клике переключаем флаг на противоположный
+      isClicked = !isClicked;
+
+      // Если после переключения флаг true — кнопка сейчас в "нажатом" состоянии
+      if (isClicked) {
+        // Меняем текст внутри кнопки
+        button.textContent = 'Вы нажали кнопку!';
+        // Добавляем CSS-класс, который меняет цвет фона кнопки
+        button.classList.add('is-clicked');
+      } else {
+        // Иначе возвращаем исходный текст
+        button.textContent = 'Нажми меня';
+        // И убираем класс, возвращая исходный цвет
+        button.classList.remove('is-clicked');
+      }
+    });
+  </script>
 </body>
 </html>
