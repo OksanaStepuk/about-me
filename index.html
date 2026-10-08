@@ -420,6 +420,52 @@
     z-index: 10;
   }
 
+  /* Блок «Три факта обо мне» в конце страницы */
+  .facts-block {
+    margin-top: 40px;
+  }
+
+  .fact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 14px;
+  }
+
+  .fact-card {
+    padding: 16px;
+    background: var(--bg);
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.6s ease;
+  }
+
+  .fact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(13, 92, 94, 0.12);
+  }
+
+  .fact-card .fact-icon {
+    display: block;
+    font-size: 26px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .fact-card h3 {
+    margin: 0 0 6px 0;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--accent);
+  }
+
+  .fact-card p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--text);
+  }
+
   @media (max-width: 480px) {
     body { padding: 24px 16px; }
     .card { padding: 32px 22px; }
@@ -525,6 +571,27 @@
     </details>
 
     <button id="toggleBtn" class="toggle-btn">Нажми меня</button>
+
+    <section class="facts-block">
+      <p class="section-label reveal">Три факта обо мне</p>
+      <div class="fact-cards">
+        <div class="fact-card reveal">
+          <span class="fact-icon">🏊‍♀️</span>
+          <h3>Плавание</h3>
+          <p>Проплыла два заплыва по 2 км — выносливость и внутренняя дисциплина в вещах, требующих подготовки.</p>
+        </div>
+        <div class="fact-card reveal">
+          <span class="fact-icon">🐎🎨</span>
+          <h3>Верховая езда и живопись</h3>
+          <p>Занимаюсь верховой ездой и рисую маслом — сочетание энергии и движения с эстетикой и концентрацией.</p>
+        </div>
+        <div class="fact-card reveal">
+          <span class="fact-icon">👗</span>
+          <h3>Свой бренд одежды</h3>
+          <p>Мечтаю создать собственный бренд одежды и уже прорабатываю продуктовые гипотезы и тестирование спроса.</p>
+        </div>
+      </div>
+    </section>
   </div>
 
   <script>
